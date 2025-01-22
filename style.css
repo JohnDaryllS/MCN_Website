@@ -73,7 +73,7 @@ body {
   /* Category Section */
   .category {
     position: absolute;
-    top: 85%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%); 
     background-color: #faf8f8;
@@ -104,6 +104,7 @@ body {
     display: block; 
     margin: 0 20px;
     transition: transform 1.2s ease;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
   }
 
   .medal h2 {
@@ -145,38 +146,37 @@ body {
       background-color: rgb(212, 64, 93);
     }
 
-    /* Footer Section */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #003366;
-  color: white;
-  padding: 20px 50px;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+      /* Footer Section */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 20px 30px;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      bottom: 0;
+      width: auto;
+    }
 
-.footer-left {
-  font-size: 0.9rem;
-}
+    .footer-left {
+      font-size: 0.9rem;
+    }
 
-.footer-right {
-  display: flex;
-  align-items: center;
-  padding-right: 5%;
-  gap: 10px;
-}
+    .footer-right {
+      display: flex;
+      align-items: center;
+      padding-right: 5%;
+      gap: 10px;
+    }
 
-.footer-right img {
-  height: 30px;
-}
+    .footer-right img {
+      height: 30px;
+    }
 
-.footer-right p {
-  font-size: 0.9rem;
-}
+    .footer-right p {
+      font-size: 0.9rem;
+    }
 
     @media (max-width: 768px) {
       .navbar ul {
@@ -210,3 +210,26 @@ body {
       font-size: 35px;
       color: rgb(0, 0, 0);
     }
+
+    /* Category Section */
+  .category {
+    padding: 3px;
+    gap: 3px;
+  }
+
+  .medal {
+    text-align: center;
+  }
+
+  .medal img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .medal h2 {
+    font-size: 0.8rem;
+  }
+
+  .medal p {
+    font-size: 0.7rem;
+  }
