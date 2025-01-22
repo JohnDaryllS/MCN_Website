@@ -177,7 +177,7 @@ body {
     .footer-right p {
       font-size: 0.9rem;
     }
-
+    
     @media (max-width: 768px) {
       .navbar ul {
         flex-direction: column;
@@ -203,6 +203,29 @@ body {
         display: block;
         cursor: pointer;
       }
+
+          /* Category Section */
+      .category {
+        padding: 3px;
+        gap: 3px;
+      }
+
+      .medal {
+        text-align: center;
+      }
+
+      .medal img {
+        width: 100px;
+        height: 90px;
+      }
+
+      .medal h2 {
+        font-size: 0.8rem;
+      }
+
+      .medal p {
+        font-size: 0.7rem;
+      }
     }
 
     .menu-toggle {
@@ -210,26 +233,3 @@ body {
       font-size: 35px;
       color: rgb(0, 0, 0);
     }
-
-    /* Category Section */
-  .category {
-    padding: 3px;
-    gap: 3px;
-  }
-
-  .medal {
-    text-align: center;
-  }
-
-  .medal img {
-    width: 100px;
-    height: 90px;
-  }
-
-  .medal h2 {
-    font-size: 0.8rem;
-  }
-
-  .medal p {
-    font-size: 0.7rem;
-  }
