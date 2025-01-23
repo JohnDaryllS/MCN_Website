@@ -50,7 +50,58 @@
   <section class="about-us" id="about-us"></section>
   <section class="core-values" id="core-values"></section>
   <section class="team" id="team"></section>
-  <section class="contact-us" id="contact-us"></section>
+
+  <section class="contact-us" id="contact-us">
+    <div class="contact-container">
+      <div class="company-info">
+        <h2>Contact Information</h2>
+        <div class="info-item">
+          <img src="img/8726191_phone_volume_icon.png" alt="Phone Icon" /><br>
+          <span style="border-left: 3px solid yellow; padding-left: 5px;">(082)224-1002</span>
+        </div>
+        <div class="info-item">
+          <img src="img/7101527_gmail_email_mail_icon.png" alt="Phone Icon" />
+          <span style="border-left: 3px solid yellow; padding-left: 5px;">mcnfederation@gmail.com</span>
+          <span style="border-left: 3px solid yellow; padding-left: 5px;">admin@mcnfoccuscoops.com</span>
+        </div>
+      </div>
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+          
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="map-container">
+        <div class="map-buttons">
+          <button onclick="showLocation('location1')">Location 1</button>
+          <button onclick="showLocation('location2')">Location 2</button>
+          <button onclick="showLocation('location3')">Location 3</button>
+          <button onclick="showLocation('location4')">Location 4</button>
+          <button onclick="showLocation('location5')">Location 5</button>
+          <button onclick="showLocation('location6')">Location 6</button>
+          <button onclick="showLocation('location7')">Location 7</button>
+          <button onclick="showLocation('location8')">Location 8</button>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
 
   <footer class="footer">
     <div class="footer-left">
@@ -61,6 +112,62 @@
       <p>Powered by Model Cooperative Network</p>
     </div>
   </footer>
+
+  <script>
+    // Initialize map and set default location
+    let map;
+    let markers = [];
+    const locations = {
+      location1: { lat: 40.7128, lng: -74.0060 }, // New York
+      location2: { lat: 34.0522, lng: -118.2437 }, // Los Angeles
+      location3: { lat: 41.8781, lng: -87.6298 }, // Chicago
+      location4: { lat: 29.7604, lng: -95.3698 }, // Houston
+      location5: { lat: 33.4484, lng: -112.0740 }, // Phoenix
+      location6: { lat: 39.7392, lng: -104.9903 }, // Denver
+      location7: { lat: 47.6062, lng: -122.3321 }, // Seattle
+      location8: { lat: 25.7617, lng: -80.1918 }, // Miami
+    };
+  
+    function initMap() {
+      // Set default map center and zoom level
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: locations.location1,
+        zoom: 10,
+      });
+  
+      // Add a default marker
+      addMarker(locations.location1);
+    }
+  
+    // Add a marker to the map
+    function addMarker(location) {
+      // Clear existing markers
+      markers.forEach(marker => marker.setMap(null));
+      markers = [];
+  
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+  
+      markers.push(marker);
+    }
+  
+    function showLocation(locationKey) {
+      const location = locations[locationKey];
+      if (location) {
+        map.setCenter(location);
+        map.setZoom(10);
+        addMarker(location);
+      } else {
+        alert("Location not found!");
+      }
+    }
+  </script>
+  
+  <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
+  </script>
   
 
   <script>

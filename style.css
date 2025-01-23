@@ -143,9 +143,134 @@ body {
     /* Contact Us */
     .contact-us {
       height: 100vh;
-      background-color: rgb(212, 64, 93);
+      background-color: rgb(206, 202, 202);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contact-container {
+      display: flex;
+      gap: 20px;
+      width: 90%;
+      max-width: 1400px;
+      align-items: flex-start;
     }
 
+    .company-info {
+      width: 30%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .company-info h2 {
+      margin-top: 180px;
+      margin-bottom: 40px;
+      color: rgb(212, 64, 93);
+      font-size: 30px;
+    }
+    
+    .info-item {
+      display: block;
+      align-items: center;
+      margin-bottom: 45px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .info-item img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      object-fit: contain;
+    }
+    
+    .form-container {
+      width: 65%;
+      padding: 20px;
+      background-color: #003366;
+      border-radius: 10px;
+    }
+    
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 40px;
+      color: rgb(255, 255, 255);
+    }
+    
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    
+    .form-container input,
+    .form-container textarea {
+      width: 90%;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .form-container button {
+      padding: 10px 20px;
+      background-color: rgb(62, 235, 151);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .form-container button:hover {
+      background-color: rgb(180, 50, 80);
+    }
+    
+    .map-container {
+      position: relative;
+      width: 90%;
+      height: 612px;
+      border: 10px solid #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .map-buttons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(255, 255, 255, 0.9);
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .map-buttons button {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 2px 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .map-buttons button:hover {
+      background-color: rgb(212, 210, 210);
+    }
+    
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+    
       /* Footer Section */
     .footer {
       display: flex;
