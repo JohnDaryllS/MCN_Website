@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <title>Model Cooperative Network</title>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -35,21 +36,28 @@
 
   <section class="category">
     <div class="medal">
-      <img src="img/Silver.png" alt="Silver">
-      <h2>SILVER</h2>
-      <p>70-79 Rating</p>
+        <img src="img/Silver.png" alt="Silver">
+        <h2 onclick="showPopup(['img/ademc.png'])">SILVER</h2>
+        <p>70-79 Rating</p>
     </div>
     <div class="medal">
-      <img src="img/Gold.png" alt="Gold">
-      <h2>GOLD</h2>
-      <p>80-89 Rating</p>
+        <img src="img/Gold.png" alt="Gold">
+        <h2 onclick="showPopup(['img/silangan.jpg'])">GOLD</h2>
+        <p>80-89 Rating</p>
     </div>
     <div class="medal">
-      <img src="img/platinum.png" alt="Platinum">
-      <h2>PLATINUM</h2>
-      <p>90-100 Rating</p>
+        <img src="img/platinum.png" alt="Platinum">
+        <h2 onclick="showPopup(['img/tagum.jpg'])">PLATINUM</h2>
+        <p>90-100 Rating</p>
     </div>
-  </section>
+</section>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <div class="popup-images" id="popup-images"></div>
+    </div>
+</div>
   
   
   
@@ -102,22 +110,26 @@
       </div>
       <div class="form-container">
         <h2>Contact Us</h2>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your email" required>
-          
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" placeholder="Your phone number">
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
-          
-          <button type="submit">Send Message</button>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            
+            <button class="button" id="submit" type="submit">Submit</button>
         </form>
+        
+        <!-- Alert Message -->
+        <div id="alert" class="alert" style="display: none;"></div>
       </div>
+    
       <div class="map-container">
         <div class="map-buttons">
           <button onclick="showLocation('location1')" style="border-right: 1px solid gray;">Location 1</button>
@@ -146,6 +158,32 @@
     </div>
   </footer>
 
+  <script type="text/javascript">
+    // Initialize EmailJS
+    (function(){
+      emailjs.init({
+        publicKey: "6DARbpXGmBZWHnvRj",
+      });
+   })();
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        const form = event.target;
+        
+        // Send email
+        emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
+            .then(function(response) {
+                alert('Your message has been sent successfully!', response);
+            }, function(error) {
+                alert('Something went wrong...', error);
+            });
+    });
+</script>
+
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     // Initialize map and set default location
     let map;
@@ -210,7 +248,9 @@
     }
   </script>
 
+  <script src="pop-upcontainer.js"></script>
   <script src="script.js"></script>
+
 
 </body>
 </html>

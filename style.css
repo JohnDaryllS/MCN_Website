@@ -111,11 +111,64 @@ body {
     margin-top: 10px;
     font-size: 1rem;
     color: #333;
+    cursor: pointer;
+  }
+
+  .medal h2:hover {
+    text-decoration: underline;
   }
 
   .medal img:hover {
     transform: rotateY(360deg);
   }
+
+  /* Popup container styling */
+.popup {
+  display: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto; /* Adjust height automatically */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+}
+
+.popup-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Images container */
+.popup-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.popup-images img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
     /* Services */
     .services {
@@ -197,6 +250,7 @@ body {
       margin-bottom: 20px;
       font-size: 40px;
       color: rgb(255, 255, 255);
+      text-align: center;
     }
     
     .form-container label {
@@ -276,7 +330,7 @@ body {
     #scrollToTopBtn {
       position: fixed;
       bottom: 100px;
-      right: 30px;
+      right: 15px;
       z-index: 100;
       display: none;
       background-color: #377fcc;
