@@ -12,18 +12,30 @@
 
   <div class="navbar">
     <div class="logo">
-      <img src="img/mcn logo.png" alt="Logo">
+        <img src="img/mcn logo.png" alt="Logo">
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul id="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about-us">About Us</a></li>
-      <li><a href="#core-values">Core Values</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+            <a href="#services">Services ﹀</a>
+            <ul class="dropdown-menu">
+                <li><a href="#monitoring">Monitoring to Adherence to Prudence Standards</a></li>
+                <li><a href="#branding">Foccus Branding</a></li>
+                <li><a href="#capability-building">Capability Building</a></li>
+                <li><a href="#consultancy">Consultancy</a></li>
+                <li><a href="#audit">Audit & Accounting Services</a></li>
+                <li><a href="#revolving-fund">Foccus Revolving Fund Facility</a></li>
+                <li><a href="#business-research">Business Research and Development</a></li>
+            </ul>
+        </li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#core-values">Core Values</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
     </ul>
-  </div>
+</div>
+
 
   <section class="home" id="home">
     <div class="container">
@@ -37,7 +49,7 @@
   <section class="category">
     <div class="medal">
         <img src="img/Silver.png" alt="Silver">
-        <h2 onclick="showPopup(['img/ademc.png'])">SILVER</h2>
+        <h2 onclick="showPopup(['img/ademc.png','img/fcc.png','img/cevcc.jpg','img/icc.png','img/kapa;ong.jpg','img/magrow.jpg','img/nico.jpg','img/panabo.jpg','img/pantukan.png','img/simc.png','img/uspd.jpg'])">SILVER</h2>
         <p>70-79 Rating</p>
     </div>
     <div class="medal">
@@ -93,6 +105,39 @@
       </div>
     </div>
   </section>
+
+  <div class="marquee-container">
+        <div class="marquee">
+            <img src="img/ademc.png" alt="Logo 1">
+            <img src="img/cevcc.jpg" alt="Logo 2">
+            <img src="img/fcc.png" alt="Logo 3">
+            <img src="img/icc.png" alt="Logo 4">
+            <img src="img/kapa;ong.jpg" alt="Logo 5">
+            <img src="img/magrow.jpg" alt="Logo 6">
+            <img src="img/nico.jpg" alt="Logo 7">
+            <img src="img/panabo.jpg" alt="Logo 8">
+            <img src="img/pantukan.png" alt="Logo 9">
+            <img src="img/silangan.jpg" alt="Logo 10">
+            <img src="img/simc.png" alt="Logo 11">
+            <img src="img/tagum.jpg" alt="Logo 12">
+            <img src="img/uspd.jpg" alt="Logo 13">
+        </div>
+        <div class="marquee">
+          <img src="img/ademc.png" alt="Logo 1">
+          <img src="img/cevcc.jpg" alt="Logo 2">
+          <img src="img/fcc.png" alt="Logo 3">
+          <img src="img/icc.png" alt="Logo 4">
+          <img src="img/kapa;ong.jpg" alt="Logo 5">
+          <img src="img/magrow.jpg" alt="Logo 6">
+          <img src="img/nico.jpg" alt="Logo 7">
+          <img src="img/panabo.jpg" alt="Logo 8">
+          <img src="img/pantukan.png" alt="Logo 9">
+          <img src="img/silangan.jpg" alt="Logo 10">
+          <img src="img/simc.png" alt="Logo 11">
+          <img src="img/tagum.jpg" alt="Logo 12">
+          <img src="img/uspd.jpg" alt="Logo 13">
+      </div>
+    </div>
 
   <section class="contact-us" id="contact-us">
     <div class="contact-container">
@@ -181,75 +226,19 @@
             });
     });
 </script>
-
-
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize map and set default location
-    let map;
-    let markers = [];
-    const locations = {
-      location1: { lat: 40.7128, lng: -74.0060 }, // New York
-      location2: { lat: 34.0522, lng: -118.2437 }, // Los Angeles
-      location3: { lat: 41.8781, lng: -87.6298 }, // Chicago
-      location4: { lat: 29.7604, lng: -95.3698 }, // Houston
-      location5: { lat: 33.4484, lng: -112.0740 }, // Phoenix
-      location6: { lat: 39.7392, lng: -104.9903 }, // Denver
-      location7: { lat: 47.6062, lng: -122.3321 }, // Seattle
-      location8: { lat: 25.7617, lng: -80.1918 }, // Miami
-    };
-  
-    function initMap() {
-      // Set default map center and zoom level
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: locations.location1,
-        zoom: 10,
-      });
-  
-      // Add a default marker
-      addMarker(locations.location1);
-    }
-  
-    // Add a marker to the map
-    function addMarker(location) {
-      // Clear existing markers
-      markers.forEach(marker => marker.setMap(null));
-      markers = [];
-  
-      const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-      });
-  
-      markers.push(marker);
-    }
-  
-    function showLocation(locationKey) {
-      const location = locations[locationKey];
-      if (location) {
-        map.setCenter(location);
-        map.setZoom(10);
-        addMarker(location);
-      } else {
-        alert("Location not found!");
-      }
-    }
-  </script>
-  
+  <script src="js/map.js"></script>
   <script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
   </script>
-  
-
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
       menu.classList.toggle('show');
     }
   </script>
-
-  <script src="pop-upcontainer.js"></script>
-  <script src="script.js"></script>
+  <script src="js/pop-upcontainer.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>

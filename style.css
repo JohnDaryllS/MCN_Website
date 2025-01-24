@@ -39,9 +39,8 @@ body {
     transition: transform 0.2s ease, border-bottom 0.2s ease;
   }
 
-  /* Hover Effect */
   .navbar ul li a:hover {
-    color: #6974d5;
+    color: #d51dc0;
   }
 
   .navbar ul li a::after {
@@ -61,6 +60,54 @@ body {
   }
 
   .navbar ul li a:active {
+    transform: scale(0.95);
+  }
+
+    /* Dropdown Menu */
+  .navbar .dropdown {
+    position: relative;
+  }
+
+  .navbar .dropdown-menu{
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 300px;
+    z-index: 1000;
+  }
+
+  .navbar .dropdown-menu .about-us{
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  .navbar .dropdown-menu li {
+    padding: 10px 20px;
+  }
+
+  .navbar .dropdown-menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    transition: background 0.2s ease;
+  }
+
+  .navbar .dropdown-menu li a:hover {
+    color: #000000;
+  }
+
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .navbar .dropdown-menu li a:active {
     transform: scale(0.95);
   }
 
@@ -130,8 +177,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: auto; /* Adjust height automatically */
-  background-color: #fff;
+  height: auto;
+  background-color: #3cdadd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 1000;
@@ -191,6 +238,41 @@ body {
     .team {
       height: 100vh;
       background-color: rgb(214, 42, 200);
+    }
+
+    .marquee-container {
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .marquee {
+        display: inline-block;
+        animation: scroll 20s linear infinite;
+        gap: 40px;
+        padding-top: 10px;
+        will-change: transform;
+    }
+    
+    .marquee img {
+        height: 80px;
+        gap: 20px;/* Adjust logo size */
+        width: auto;   /* Maintain aspect ratio */
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 
     /* Contact Us */
