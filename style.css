@@ -5,12 +5,14 @@ body {
     max-height: 100vh;
   }
 
-/* Navigation */
+    /* Navigation */
   .navbar {
     display: flex;
+    width: 90%;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.549);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px 80px;
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -111,16 +113,51 @@ body {
     transform: scale(0.95);
   }
 
-  /* Homepage */
+
+    /* Basic styles for the slider */
   .home {
-    height: 70vh;
-    background-color: white;
+    width: 100%;
+    height: 90vh;
+    background-image: url(img/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 3s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes animate {
+    0%{
+      background-image: url(img/2.jpg);
+    }
+    20%{
+      background-image: url(img/3.jpg);
+    }
+    40%{
+      background-image: url(img/4.jpg);
+    }
+    60%{
+      background-image: url(img/5.jpg);
+    }
+    80%{
+      background-image: url(img/1.jpg);
+    }
+    100%{
+      background-image: url(img/2.jpg);
+    }
   }
 
   /* Category Section */
   .category {
     position: absolute;
-    top: 82%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%); 
     background-color: #faf8f8;
@@ -169,52 +206,52 @@ body {
     transform: rotateY(360deg);
   }
 
-  /* Popup container styling */
-.popup {
-  display: none;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: auto;
-  background-color: #3cdadd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  z-index: 1000;
-  text-align: center;
-  padding: 20px;
-}
+      /* Popup container styling */
+    .popup {
+      display: none;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: auto;
+      background-color: #3cdadd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      z-index: 1000;
+      text-align: center;
+      padding: 20px;
+    }
 
-.popup-content {
-  position: relative;
-}
+    .popup-content {
+      position: relative;
+    }
 
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  font-size: 30px;
-  cursor: pointer;
-  color: #333;
-}
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      font-size: 30px;
+      cursor: pointer;
+      color: #333;
+    }
 
-/* Images container */
-.popup-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 20px;
-}
+    /* Images container */
+    .popup-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-.popup-images img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+    .popup-images img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
 
 
     /* Services */
@@ -299,7 +336,7 @@ body {
     }
     
     .company-info h2 {
-      margin-top: 180px;
+      margin-top: 100px;
       margin-bottom: 40px;
       color: rgb(212, 64, 93);
       font-size: 30px;
