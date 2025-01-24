@@ -8,36 +8,36 @@ body {
     /* Navigation */
   .navbar {
     display: flex;
-    width: 90%;
+    width: 100%;
     position: fixed;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px 80px;
+    padding: 5px 80px;
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 1000;
   }
 
   .navbar .logo img {
-    height: 75px;
+    height: 60px;
   }
 
   .navbar ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding-right: 150px;
     display: flex;
   }
 
   .navbar ul li {
-    margin: 0 15px;
+    margin: 0 25px;
   }
 
   .navbar ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 18px;
     position: relative;
     transition: transform 0.2s ease, border-bottom 0.2s ease;
   }
@@ -121,7 +121,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: 3s;
+    transition: 1s;
 
     animation-name: animate;
     animation-direction: alternate-reverse;
@@ -214,7 +214,7 @@ body {
       transform: translate(-50%, -50%);
       width: 400px;
       height: auto;
-      background-color: #3cdadd;
+      background-color: hsla(0, 0%, 98%, 0.82);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       z-index: 1000;
@@ -335,7 +335,7 @@ body {
     }
     
     .company-info h2 {
-      margin-top: 100px;
+      margin-top: 150px;
       margin-bottom: 40px;
       color: rgb(212, 64, 93);
       font-size: 30px;
@@ -359,6 +359,7 @@ body {
     .form-container {
       width: 65%;
       padding: 20px;
+      margin-top: 70px;
       background-color: #003366;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.514);
@@ -407,6 +408,7 @@ body {
       position: relative;
       width: 90%;
       height: 612px;
+      margin-top: 70px;
       border: 10px solid #ffffff;
       border-radius: 10px;
       overflow: hidden;
@@ -433,6 +435,7 @@ body {
       padding: 2px 6px;
       cursor: pointer;
       transition: background-color 0.3s;
+      margin-bottom: 5px;
     }
     
     .map-buttons button:hover {
