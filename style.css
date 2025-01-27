@@ -284,22 +284,13 @@ body {
 
     /* About Us */
     .about-us {
-      height: 100vh;
+      height: 150vh;
       background-color: rgb(255, 255, 255);
       padding: 40px;
     }
-
-    .about-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-    }
-
+    
     .about-us img {
       width: 200px;
-      height: 200px;
       object-fit: contain;
     }
 
@@ -309,17 +300,111 @@ body {
       line-height: 1.6;
       margin-bottom: 20px;
     }
-    
-    .core-values {
-      background-color: #4CAF50;
-      color: white;
+
+    .vision-mission-container {
       text-align: center;
       padding: 20px;
-      width: 150px;
-      height: 150px;
-      border-radius: 8px;
+    }
+    
+    .vision-mission-container h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+    
+    .circles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    
+    .circle {
+      background: linear-gradient(135deg, #ffcf33, #0049d0);
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    
+    .inner-circle {
+      background-color: white;
+      border-radius: 50%;
+      width: 80%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .vision-mission-container h2 {
+      font-size: 1.5rem;
+      color: #0049d0;
+      margin-bottom: 10px;
+    }
+    
+    .vision-mission-container p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .core-values-container {
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .core-values-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .value-item {
+      background: #ffffff;
+      border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    } 
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .value-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .core-values-container h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: #0073e6;
+    }
+    
+    .core-values-container p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
 
     .team {
       height: 100vh;
