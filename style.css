@@ -881,6 +881,38 @@ body {
     .footer-right p {
       font-size: 0.9rem;
     }
+
+    /* BOD */
+
+    .tree {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 150px;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    .member {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+    .member img {
+      width: 100px;
+      height: 100px;
+      border: 3px solid #007bff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .member .title {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #000000;
+    }
+    .connections {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     
     @media (max-width: 768px) {
       .navbar ul {

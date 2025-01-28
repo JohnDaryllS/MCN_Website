@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board of Directors</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        background-image: url(img/How\ crowdsourcing\ is\ revolutioni.png);
+        background-size: cover;
+        height: 100vh;
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="img/mcn logo.png" alt="Logo"></a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#services">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="monitoring.html">Monitoring to Adherence to Prudence Standards</a></li>
+                    <li><a href="branding.html">Foccus Branding</a></li>
+                    <li><a href="capability-building.html">Capability Building</a></li>
+                    <li><a href="consultancy.html">Consultancy</a></li>
+                    <li><a href="audit.html">Audit & Accounting Services</a></li>
+                    <li><a href="revolving.html">Foccus Revolving Fund Facility</a></li>
+                    <li><a href="business-research.html">Business Research and Development</a></li>
+                </ul>
+            </li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li class="dropdown">
+              <a href="#">Governance</a>
+              <ul class="dropdown-menu">
+                  <li><a href="bod.html">Board of Directors</a></li>
+                  <li><a href="branding.html">MCN Management</a></li>
+              </ul>
+          </li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="faqs.html">FAQ's</a></li>
+        </ul>
+      </div>
+
+  <div class="tree">
+    <div class="member">
+      <img src="img/nico.jpg" alt="Chairperson">
+      <div class="title">Chairperson</div>
+    </div>
+
+    <div class="member">
+      <img src="img/silangan.jpg" alt="Vice Chairperson">
+      <div class="title">Vice Chairperson</div>
+    </div>
+
+    <div class="connections">
+      <div class="member">
+        <img src="img/fcc.png" alt="Director 1">
+        <div class="title">Director 1</div>
+      </div>
+      <div class="member">
+        <img src="img/kapa;ong.jpg" alt="Director 2">
+        <div class="title">Director 2</div>
+      </div>
+      <div class="member">
+        <img src="img/panabo.jpg" alt="Director 3">
+        <div class="title">Director 3</div>
+      </div>
+      <div class="member">
+        <img src="img/pantukancoop (1).jpg" alt="Director 4">
+        <div class="title">Director 4</div>
+      </div>
+      <div class="member">
+        <img src="img/tagum.jpg" alt="Director 5">
+        <div class="title">Director 5</div>
+      </div>
+    </div>
+
+    <div class="connections">
+      <div class="member">
+        <img src="img/ademc.png" alt="Luzon Representative">
+        <div class="title">Luzon Representative</div>
+      </div>
+      <div class="member">
+        <img src="img/cevcc.jpg" alt="Visayas Representative">
+        <div class="title">Visayas Representative</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-us" id="contact-us">
+    <div class="contact-container">
+      <div class="company-info">
+        <h2>Contact Information</h2>
+        <div class="info-item">
+          <img src="img/8726191_phone_volume_icon.png" alt="Phone Icon" /><br>
+          <span style="border-left: 3px solid #003366; padding-left: 5px;">(082)224-1002</span>
+        </div>
+        <div class="info-item">
+          <img src="img/7101527_gmail_email_mail_icon.png" alt="Phone Icon" />
+          <span style="border-left: 3px solid #003366; padding-left: 5px;">mcnfederation@gmail.com</span>
+          <span style="border-left: 3px solid #003366; padding-left: 5px;">admin@mcnfoccuscoops.com</span>
+        </div>
+        <div class="info-item">
+          <a href="https://www.facebook.com/mcnfoccuscoops" target="_blank"><img src="img/6214511_facebook_logo_icon.png" alt="Phone Icon" /></a><br>
+          <span style="border-left: 3px solid #003366; padding-left: 5px;">FOCCUS Group of Cooperatives</span>
+        </div>
+      </div>
+      <div class="form-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            
+            <button class="button" id="submit" type="submit">Submit</button>
+        </form>
+        
+        <!-- Alert Message -->
+        <div id="alert" class="alert" style="display: none;"></div>
+      </div>
+    
+      <div class="map-container">
+        <div class="map-buttons">
+          <button onclick="showLocation('location1')" style="border-right: 1px solid gray;">Location 1</button>
+          <button onclick="showLocation('location2')" style="border-right: 1px solid gray;">Location 2</button>
+          <button onclick="showLocation('location3')" style="border-right: 1px solid gray;">Location 3</button>
+          <button onclick="showLocation('location4')" style="border-right: 1px solid gray;">Location 4</button>
+          <button onclick="showLocation('location5')" style="border-right: 1px solid gray;">Location 5</button>
+          <button onclick="showLocation('location6')" style="border-right: 1px solid gray;">Location 6</button>
+          <button onclick="showLocation('location7')" style="border-right: 1px solid gray;">Location 7</button>
+          <button onclick="showLocation('location8')">Location 8</button>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+  
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <img src="img/favicon.png" alt="Footer Logo">
+      <p>Powered by Model Cooperative Network</p>
+    </div>
+  </footer>
+
+  <script src="js/slider.js"></script>
+
+  <script type="text/javascript">
+    // Initialize EmailJS
+    (function(){
+      emailjs.init({
+        publicKey: "6DARbpXGmBZWHnvRj",
+      });
+   })();
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        const form = event.target;
+        
+        // Send email
+        emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
+            .then(function(response) {
+                alert('Your message has been sent successfully!', response);
+            }, function(error) {
+                alert('Something went wrong...', error);
+            });
+    });
+</script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/map.js"></script>
+  <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+  <script src="js/pop-upcontainer.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
