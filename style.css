@@ -280,9 +280,6 @@ body {
     .services {
       height: 100vh;
       background-color: rgb(255, 255, 255);
-      display: flex; /* Enables flexbox */
-      justify-content: center; /* Centers horizontally */
-      align-items: center; /* Centers vertically */
     }
 
     .sample {
@@ -302,6 +299,14 @@ body {
       position: absolute;
       top: 120%;
       left: 20%;
+    }
+
+    .services h2 {  
+      font-size: 3rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 100px;
     }
 
     /* Monitoring */
@@ -390,6 +395,64 @@ body {
 
     .container-facility img:hover {
       transform: scale(1.1);
+    }
+
+    .container-assesstment {
+      text-align: center;
+    }
+    
+    .container-assesstment h1 {
+      color: #002d6d;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .container-assesstment .card-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .container-assesstment .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      margin: 20px 20px;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .container-assesstment .card:hover
+    {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .container-assesstment .card .icon img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    
+    .container-assesstment .card h2 {
+      color: #002d6d;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .container-assesstment .card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    
+    .divider {
+      margin-top: 10px;
+      width: 3px;
+      height: 320px;
+      background-color: #ccc;
+      align-self: stretch;
     }
 
     /* About Us */
@@ -792,8 +855,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #003366;
-      color: white;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
       padding: 20px 30px;
       box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
       bottom: 0;
