@@ -17,7 +17,7 @@
     <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li class="dropdown">
-            <a href="#">Services</a>
+            <a href="#services">Services</a>
             <ul class="dropdown-menu">
                 <li><a href="monitoring.html">Monitoring to Adherence to Prudence Standards</a></li>
                 <li><a href="branding.html">Foccus Branding</a></li>
@@ -31,7 +31,7 @@
         <li><a href="membership.html">Membership</a></li>
         <li><a href="#about-us">About Us</a></li>
         <li class="dropdown">
-          <a href="#services">Governance</a>
+          <a href="#">Governance</a>
           <ul class="dropdown-menu">
               <li><a href="bod.html">Board of Directors</a></li>
               <li><a href="branding.html">MCN Management</a></li>
@@ -176,7 +176,7 @@
           <p>Observes honesty, fairness, and transparency</p>
         </div>
         <div class="value-item">
-          <div class="icon">🤝</div>
+          <div class="icon">&#x1F4AA;</div>
           <h3>Synergy</h3>
           <p>
             Initiates, sustains, and promotes dynamic, inter-cooperative,
@@ -287,7 +287,7 @@
     </div>
   </section>
   
-  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <button id="scrollToTopBtn" title="Go to top">⇮</button>
 
   <footer class="footer">
     <div class="footer-left">
@@ -302,20 +302,17 @@
   <script src="js/slider.js"></script>
 
   <script type="text/javascript">
-    // Initialize EmailJS
     (function(){
       emailjs.init({
         publicKey: "6DARbpXGmBZWHnvRj",
       });
    })();
 
-    // Handle form submission
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
         
         const form = event.target;
-        
-        // Send email
+
         emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
             .then(function(response) {
                 alert('Your message has been sent successfully!', response);

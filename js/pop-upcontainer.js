@@ -2,10 +2,8 @@ function showPopup(imageUrls) {
     const popup = document.getElementById('popup');
     const imagesContainer = document.getElementById('popup-images');
 
-    // Clear existing images
     imagesContainer.innerHTML = '';
 
-    // Add new images
     imageUrls.forEach(url => {
         const img = document.createElement('img');
         img.src = url;
