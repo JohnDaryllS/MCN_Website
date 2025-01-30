@@ -81,12 +81,12 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none;
-    min-width: 300px;
+    min-width: 260px;
     z-index: 1000;
   }
 
   .navbar .dropdown-menu .about-us{
-    min-width: 180px;
+    min-width: 170px;
     z-index: 1000;
   }
 
@@ -503,6 +503,58 @@ body {
       height: 320px;
       background-color: #ccc;
       align-self: stretch;
+    }
+
+    /* Members */
+
+    .tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+    }
+
+    .level {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+      padding: 10px;
+      background-color:mediumturquoise;
+      text-align: center;
+      width: 200px;
+    }
+
+    .frame {
+      border: 3px solid #e5f015;
+      border-radius: 50%;
+      width: 85px;
+      height: 85px;
+    }
+
+    .node img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #0808fd;
+    }
+
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .position {
+      font-size: 14px;
+      color: #555;
     }
 
     /* About Us */
