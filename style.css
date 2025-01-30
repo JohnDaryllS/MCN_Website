@@ -299,6 +299,10 @@ body {
       position: absolute;
       top: 120%;
       left: 20%;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
     }
 
     .services h2 {  
@@ -307,6 +311,52 @@ body {
       text-align: center;
       margin-bottom: 20px;
       padding-top: 100px;
+    }
+
+    .services-section {
+      height: 90vh;
+      background-color: rgb(231, 226, 226);
+      padding: 40px;
+    }
+
+    .container-services {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .container-services .text {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .container-services .text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .container-services .text p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .container-services .foccus{
+        max-width: 100px;
+    }
+    
+    .container-services .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container-services .image img {
+      width: 200px;
+      object-fit: contain;
+      margin-top: 50px;
     }
 
     /* Monitoring */
@@ -962,7 +1012,17 @@ body {
       .medal p {
         font-size: 0.7rem;
       }
+
+      .container-services {
+        flex-direction: column;
+        text-align: center;
     }
+
+    .container-services .text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+  }
 
     .menu-toggle {
       display: none;
