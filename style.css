@@ -767,7 +767,7 @@ body {
     }
     
     .company-info h2 {
-      margin-top: 150px;
+      margin-top: 130px;
       margin-bottom: 40px;
       color: rgb(212, 64, 93);
       font-size: 30px;
@@ -776,7 +776,7 @@ body {
     .info-item {
       display: block;
       align-items: center;
-      margin-bottom: 45px;
+      margin-bottom: 15px;
       font-size: 16px;
       color: #333;
     }
