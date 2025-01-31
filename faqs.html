@@ -134,7 +134,9 @@
             <span style="border-left: 3px solid #003366; padding-left: 5px;">admin@mcnfoccuscoops.com</span>
           </div>
           <div class="info-item">
-            <a href="https://www.facebook.com/mcnfoccuscoops" target="_blank"><img src="img/6214511_facebook_logo_icon.png" alt="Phone Icon" /></a><br>
+            <a href="https://www.facebook.com/mcnfoccuscoops" target="_blank"><img src="img/6214511_facebook_logo_icon.png" alt="Phone Icon" /></a>
+            <a href="https://www.instagram.com/mcnfoccuscoops/" target="_blank"><img src="img/4584665_instagram_logo_media_network_social_icon.png" alt="Phone Icon" /></a>
+            <a href="https://x.com/mcnfoccuscoops" target="_blank"><img src="img/11185863_x_twitter logo_x logo_branding_twitter-x_icon.png" alt="Phone Icon" /></a><br>
             <span style="border-left: 3px solid #003366; padding-left: 5px;">FOCCUS Group of Cooperatives</span>
           </div>
         </div>
@@ -175,57 +177,55 @@
         </div>
       </div>
     </section>
-      
-      <button id="scrollToTopBtn" title="Go to top">⇮</button>
-    
-      <footer class="footer">
-        <div class="footer-left">
-          <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
-        </div>
-        <div class="footer-right">
-          <img src="img/favicon.png" alt="Footer Logo">
-          <p>Powered by Model Cooperative Network</p>
-        </div>
-      </footer>
-    
-      <script src="js/slider.js"></script>
-    
-      <script type="text/javascript">
-        // Initialize EmailJS
-        (function(){
-          emailjs.init({
-            publicKey: "6DARbpXGmBZWHnvRj",
-          });
-       })();
-    
-        // Handle form submission
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            const form = event.target;
-            
-            // Send email
-            emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
-                .then(function(response) {
-                    alert('Your message has been sent successfully!', response);
-                }, function(error) {
-                    alert('Something went wrong...', error);
-                });
-        });
-    </script>
-      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      <script src="js/map.js"></script>
-      <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
-      </script>
-      <script>
-        function toggleMenu() {
-          const menu = document.getElementById('menu');
-          menu.classList.toggle('show');
-        }
-      </script>
-      <script src="js/pop-upcontainer.js"></script>
-      <script src="js/script.js"></script>
+  
+  <button id="scrollToTopBtn" title="Go to top">⇮</button>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <p><a href="privacypolicy.html">Privacy Policy</a> &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <img src="img/favicon.png" alt="Footer Logo">
+      <p>Powered by Model Cooperative Network</p>
+    </div>
+  </footer>
+
+  <script src="js/slider.js"></script>
+
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "6DARbpXGmBZWHnvRj",
+      });
+   })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+
+        emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
+            .then(function(response) {
+                alert('Your message has been sent successfully!', response);
+            }, function(error) {
+                alert('Something went wrong...', error);
+            });
+    });
+</script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/map.js"></script>
+  <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
+  </script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+  <script src="js/pop-upcontainer.js"></script>
+  <script src="js/script.js"></script>
+
     
       <script>
         const faqQuestions = document.querySelectorAll('.faq-question');
