@@ -26,6 +26,59 @@
         max-width: 80%;
         height: 540px;
     }
+    .members-container {
+        padding: 50px 0;
+        text-align: center;
+    }
+    .members-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .member {
+        flex: 1 1 calc(20% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+    }
+    .member img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+    .member h3 {
+        margin: 10px 0 5px;
+        font-size: 18px;
+    }
+    .member p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }
+    .see-more-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .smbutton {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .smbutton:hover {
+      background-color: #555;
+    }
 </style>
 <body>
   <div class="navbar">
@@ -61,6 +114,244 @@
             Thus, is has members in Mindanao, Visayas and Luzon - <i style="font-weight: bold;">more than 60 cooperatives</i><br>
         </p>
         <img src="img/membership.jpeg" alt="Big Image">
+    </div>
+
+    <div class="members-container">
+        <h2>Our Members</h2>
+        <div class="members-grid">
+            <div class="member">
+                <img src="img/member1.jpg" alt="Member Image">
+                <h3>Member Name 1</h3>
+                <p>Position 1</p>
+            </div>
+            <div class="member">
+                <img src="img/member2.jpg" alt="Member Image">
+                <h3>Member Name 2</h3>
+                <p>Position 2</p>
+            </div>
+            <div class="member">
+                <img src="img/member3.jpg" alt="Member Image">
+                <h3>Member Name 3</h3>
+                <p>Position 3</p>
+            </div>
+            <div class="member">
+                <img src="img/member4.jpg" alt="Member Image">
+                <h3>Member Name 4</h3>
+                <p>Position 4</p>
+            </div>
+            <div class="member">
+                <img src="img/member5.jpg" alt="Member Image">
+                <h3>Member Name 5</h3>
+                <p>Position 5</p>
+            </div>
+            <div class="member">
+                <img src="img/member6.jpg" alt="Member Image">
+                <h3>Member Name 6</h3>
+                <p>Position 6</p>
+            </div>
+            <div class="member">
+                <img src="img/member7.jpg" alt="Member Image">
+                <h3>Member Name 7</h3>
+                <p>Position 7</p>
+            </div>
+            <div class="member">
+                <img src="img/member8.jpg" alt="Member Image">
+                <h3>Member Name 8</h3>
+                <p>Position 8</p>
+            </div>
+            <div class="member">
+                <img src="img/member9.jpg" alt="Member Image">
+                <h3>Member Name 9</h3>
+                <p>Position 9</p>
+            </div>
+            <div class="member">
+                <img src="img/member10.jpg" alt="Member Image">
+                <h3>Member Name 10</h3>
+                <p>Position 10</p>
+            </div>
+            <div class="member">
+                <img src="img/member11.jpg" alt="Member Image">
+                <h3>Member Name 11</h3>
+                <p>Position 11</p>
+            </div>
+            <div class="member">
+                <img src="img/member12.jpg" alt="Member Image">
+                <h3>Member Name 12</h3>
+                <p>Position 12</p>
+            </div>
+            <div class="see-more-container">
+                <button class="smbutton" id="seeMoreBtn1" onclick="showMoreMembers(1)">See More</button>
+            </div>
+            <div class="member hidden">
+                <img src="img/member13.jpg" alt="Member Image">
+                <h3>Member Name 13</h3>
+                <p>Position 13</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member14.jpg" alt="Member Image">
+                <h3>Member Name 14</h3>
+                <p>Position 14</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member15.jpg" alt="Member Image">
+                <h3>Member Name 15</h3>
+                <p>Position 15</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member16.jpg" alt="Member Image">
+                <h3>Member Name 16</h3>
+                <p>Position 16</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member17.jpg" alt="Member Image">
+                <h3>Member Name 17</h3>
+                <p>Position 17</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member18.jpg" alt="Member Image">
+                <h3>Member Name 18</h3>
+                <p>Position 18</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member19.jpg" alt="Member Image">
+                <h3>Member Name 19</h3>
+                <p>Position 19</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member20.jpg" alt="Member Image">
+                <h3>Member Name 20</h3>
+                <p>Position 20</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member21.jpg" alt="Member Image">
+                <h3>Member Name 21</h3>
+                <p>Position 21</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member22.jpg" alt="Member Image">
+                <h3>Member Name 22</h3>
+                <p>Position 22</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member23.jpg" alt="Member Image">
+                <h3>Member Name 23</h3>
+                <p>Position 23</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member24.jpg" alt="Member Image">
+                <h3>Member Name 24</h3>
+                <p>Position 24</p>
+            </div>
+            <div class="see-more-container hidden">
+              <button class="smbutton" id="seeMoreBtn2" onclick="showMoreMembers(2)">See More</button>
+          </div>
+            <div class="member hidden">
+                <img src="img/member25.jpg" alt="Member Image">
+                <h3>Member Name 25</h3>
+                <p>Position 25</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member26.jpg" alt="Member Image">
+                <h3>Member Name 26</h3>
+                <p>Position 26</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member27.jpg" alt="Member Image">
+                <h3>Member Name 27</h3>
+                <p>Position 27</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member28.jpg" alt="Member Image">
+                <h3>Member Name 28</h3>
+                <p>Position 28</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member29.jpg" alt="Member Image">
+                <h3>Member Name 29</h3>
+                <p>Position 29</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member30.jpg" alt="Member Image">
+                <h3>Member Name 30</h3>
+                <p>Position 30</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member31.jpg" alt="Member Image">
+                <h3>Member Name 31</h3>
+                <p>Position 31</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member32.jpg" alt="Member Image">
+                <h3>Member Name 32</h3>
+                <p>Position 32</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member33.jpg" alt="Member Image">
+                <h3>Member Name 33</h3>
+                <p>Position 33</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member34.jpg" alt="Member Image">
+                <h3>Member Name 34</h3>
+                <p>Position 34</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member35.jpg" alt="Member Image">
+                <h3>Member Name 35</h3>
+                <p>Position 35</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member36.jpg" alt="Member Image">
+                <h3>Member Name 36</h3>
+                <p>Position 36</p>
+            </div>
+            <div class="see-more-container hidden">
+                <button class="smbutton" id="seeMoreBtn3" onclick="showMoreMembers(3)">See More</button>
+            </div>
+            <div class="member hidden">
+                <img src="img/member37.jpg" alt="Member Image">
+                <h3>Member Name 37</h3>
+                <p>Position 37</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member38.jpg" alt="Member Image">
+                <h3>Member Name 38</h3>
+                <p>Position 38</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member39.jpg" alt="Member Image">
+                <h3>Member Name 39</h3>
+                <p>Position 39</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member40.jpg" alt="Member Image">
+                <h3>Member Name 40</h3>
+                <p>Position 40</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member41.jpg" alt="Member Image">
+                <h3>Member Name 41</h3>
+                <p>Position 41</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member42.jpg" alt="Member Image">
+                <h3>Member Name 42</h3>
+                <p>Position 42</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member43.jpg" alt="Member Image">
+                <h3>Member Name 43</h3>
+                <p>Position 43</p>
+            </div>
+            <div class="member hidden">
+                <img src="img/member44.jpg" alt="Member Image">
+                <h3>Member Name 44</h3>
+                <p>Position 44</p>
+            </div>
+            <div class="see-more-container hidden">
+                <button class="smbutton" id="seeMoreBtn4" onclick="showMoreMembers(4)">See More</button>
+            </div>
+        </div>
     </div>
 
     <section class="contact-us" id="contact-us">
@@ -161,6 +452,22 @@
                 alert('Something went wrong...', error);
             });
     });
+
+    function showMoreMembers(buttonIndex) {
+        const hiddenMembers = document.querySelectorAll('.member.hidden');
+        const seeMoreContainers = document.querySelectorAll('.see-more-container.hidden');
+        let count = 0;
+        hiddenMembers.forEach(member => {
+            if (count < 12) {
+                member.classList.remove('hidden');
+                count++;
+            }
+        });
+        if (seeMoreContainers[buttonIndex - 1]) {
+            seeMoreContainers[buttonIndex - 1].classList.remove('hidden');
+        }
+        document.getElementById('seeMoreBtn' + buttonIndex).style.display = 'none';
+    }
 </script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/map.js"></script>
