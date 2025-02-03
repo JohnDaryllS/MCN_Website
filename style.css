@@ -561,15 +561,19 @@ body {
 
     /* About Us */
     .about-us {
-      height: 160vh;
+      height: 100%;
       background-color: rgb(231, 226, 226);
-      padding: 40px;
+      padding: 40px 50px;
+    }
+
+    .about-us h2 {
+      padding-top: 50px;
     }
     
     .about-us img {
       width: 200px;
       object-fit: contain;
-      margin-top: 50px;
+      margin-top: 10px;
     }
 
     .about-us p {
@@ -582,6 +586,10 @@ body {
     .vision-mission-container {
       text-align: center;
       padding: 20px;
+    }
+
+    .vision-mission-container p {
+      padding-bottom: 50px;
     }
     
     .vision-mission-container h1 {
