@@ -165,38 +165,10 @@
 </footer>
 
 <script src="js/slider.js"></script>
-
-<script type="text/javascript">
-  (function(){
-    emailjs.init({
-      publicKey: "6DARbpXGmBZWHnvRj",
-    });
- })();
-
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      const form = event.target;
-
-      emailjs.sendForm('service_bagvo4q', 'template_vaxw4qa', form)
-          .then(function(response) {
-              alert('Your message has been sent successfully!', response);
-          }, function(error) {
-              alert('Something went wrong...', error);
-          });
-  });
-</script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="js/map.js"></script>
-<script async defer 
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap">
-</script>
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-  }
-</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSAmv-Gsz0iONgGtekNlx5Bi2FgMF6f-o&callback=initMap"></script>
+<script src="js/menu.js"></script>
 <script src="js/pop-upcontainer.js"></script>
 <script src="js/script.js"></script>
 
